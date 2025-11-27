@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Store Screenshots - iOS</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            background: #1a1a1a;
+            padding: 40px;
+        }
+        
+        .poster-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+        
+        /* 1242x2688 poster */
+        .poster {
+            width: 1242px;
+            height: 2688px;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        
+        .poster-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        
+        .bg-gradient-1 {
+            background: linear-gradient(180deg, #FF2D55 0%, #AF52DE 50%, #5856D6 100%);
+        }
+        
+        .bg-gradient-2 {
+            background: linear-gradient(180deg, #1a1a2e 0%, #2d1b4e 50%, #1a1a2e 100%);
+        }
+        
+        .bg-gradient-3 {
+            background: linear-gradient(180deg, #0a0a0f 0%, #1a1a2e 100%);
+        }
+        
+        .bg-gradient-4 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+        }
+        
+        .bg-gradient-5 {
+            background: linear-gradient(180deg, #141e30 0%, #243b55 100%);
+        }
+        
+        .bg-gradient-6 {
+            background: linear-gradient(180deg, #232526 0%, #414345 100%);
+        }
+        
+        .poster-content {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 80px 60px 60px;
+        }
+        
+        .headline {
+            color: white;
+            font-size: 72px;
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+        
+        .subheadline {
+            color: rgba(255,255,255,0.85);
+            font-size: 42px;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 40px;
+            line-height: 1.4;
+        }
+        
+        .phone-frame {
+            position: relative;
+            width: 480px;
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        
+        .phone-bezel {
+            position: relative;
+            width: 480px;
+            height: 980px;
+            background: #1a1a1a;
+            border-radius: 65px;
+            padding: 14px;
+            box-shadow: 
+                0 50px 100px rgba(0,0,0,0.5),
+                0 0 0 2px rgba(255,255,255,0.1),
+                inset 0 0 0 1px rgba(255,255,255,0.05);
+        }
+        
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            border-radius: 52px;
+            overflow: hidden;
+            background: #000;
+        }
+        
+        .phone-screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+        
+        .phone-notch {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 160px;
+            height: 35px;
+            background: #1a1a1a;
+            border-radius: 0 0 20px 20px;
+            z-index: 10;
+        }
+        
+        .dynamic-island {
+            position: absolute;
+            top: 26px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 44px;
+            background: #000;
+            border-radius: 24px;
+            z-index: 10;
+        }
+        
+        .feature-badge {
+            margin-top: 30px;
+            background: rgba(255,255,255,0.15);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            padding: 20px 40px;
+            border-radius: 100px;
+            color: white;
+            font-size: 32px;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #FF2D55, #AF52DE);
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(255,45,85,0.4);
+        }
+        
+        .app-icon svg {
+            width: 70px;
+            height: 70px;
+            fill: white;
+        }
+        
+        /* Print helper - hidden */
+        .print-guide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="print-guide">
+        <h3>App Store 截图生成器</h3>
+        <p>尺寸: 1242 x 2688 px</p>
+        <p>右键点击海报 -> 检查 -> 截图节点</p>
+        <p>或使用浏览器开发者工具截图</p>
+    </div>
+
+    <div class="poster-container">
+        
+        <!-- Poster 1: 首页 -->
+        <div class="poster" id="poster1">
+            <div class="poster-bg bg-gradient-1"></div>
+            <div class="poster-content">
+                <div class="headline">用心率记录爱<br>用数据懂彼此</div>
+                <div class="subheadline">智能追踪你们的亲密时刻</div>
+                <div class="phone-frame">
+                    <div class="phone-bezel">
+                        <div class="dynamic-island"></div>
+                        <div class="phone-screen">
+                            <img src="IMG_0161.PNG" alt="首页">
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-badge">Apple Watch 实时同步</div>
+            </div>
+        </div>
+        
+        <!-- Poster 2: 数据图表 -->
+        <div class="poster" id="poster2">
+            <div class="poster-bg bg-gradient-2"></div>
+            <div class="poster-content">
+                <div class="headline">实时心率追踪</div>
+                <div class="subheadline">每一次心跳都清晰可见</div>
+                <div class="phone-frame">
+                    <div class="phone-bezel">
+                        <div class="dynamic-island"></div>
+                        <div class="phone-screen">
+                            <img src="IMG_0166.PNG" alt="数据图表">
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-badge">心率 / 强度 / 步频 多维分析</div>
+            </div>
+        </div>
+        
+        <!-- Poster 3: 会话详情 -->
+        <div class="poster" id="poster3">
+            <div class="poster-bg bg-gradient-4"></div>
+            <div class="poster-content">
+                <div class="headline">智能阶段识别</div>
+                <div class="subheadline">自动分析活动的完整节奏</div>
+                <div class="phone-frame">
+                    <div class="phone-bezel">
+                        <div class="dynamic-island"></div>
+                        <div class="phone-screen">
+                            <img src="IMG_0163.PNG" alt="会话详情">
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-badge">前奏 / 高峰 / 高潮 / 恢复</div>
+            </div>
+        </div>
+        
+        <!-- Poster 4: 实时监控 -->
+        <div class="poster" id="poster4">
+            <div class="poster-bg bg-gradient-5"></div>
+            <div class="poster-content">
+                <div class="headline">实时监控</div>
+                <div class="subheadline">与 Apple Watch 无缝连接</div>
+                <div class="phone-frame">
+                    <div class="phone-bezel">
+                        <div class="dynamic-island"></div>
+                        <div class="phone-screen">
+                            <img src="IMG_0165.PNG" alt="实时监控">
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-badge">心率曲线实时绘制</div>
+            </div>
+        </div>
+        
+        <!-- Poster 5: 设置页 -->
+        <div class="poster" id="poster5">
+            <div class="poster-bg bg-gradient-3"></div>
+            <div class="poster-content">
+                <div class="headline">隐私优先设计</div>
+                <div class="subheadline">数据仅存本地 绝不上传</div>
+                <div class="phone-frame">
+                    <div class="phone-bezel">
+                        <div class="dynamic-island"></div>
+                        <div class="phone-screen">
+                            <img src="IMG_0164.PNG" alt="设置">
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-badge">Face ID 保护 / 后台模糊</div>
+            </div>
+        </div>
+        
+        <!-- Poster 6: 会话列表 -->
+        <div class="poster" id="poster6">
+            <div class="poster-bg bg-gradient-6"></div>
+            <div class="poster-content">
+                <div class="headline">完整历史记录</div>
+                <div class="subheadline">随时回顾你们的亲密时光</div>
+                <div class="phone-frame">
+                    <div class="phone-bezel">
+                        <div class="dynamic-island"></div>
+                        <div class="phone-screen">
+                            <img src="IMG_0162.PNG" alt="会话列表">
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-badge">时长 / 阶段 / 趋势分析</div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

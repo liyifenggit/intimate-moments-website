@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Store Screenshots - Apple Watch</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+            background: #1a1a1a;
+            padding: 40px;
+        }
+        
+        .poster-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+        
+        /* 422x514 Watch poster */
+        .poster {
+            width: 422px;
+            height: 514px;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+            border-radius: 20px;
+        }
+        
+        .poster-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        
+        .bg-gradient-1 {
+            background: linear-gradient(180deg, #FF2D55 0%, #AF52DE 100%);
+        }
+        
+        .bg-gradient-2 {
+            background: linear-gradient(180deg, #1a1a2e 0%, #2d1b4e 100%);
+        }
+        
+        .poster-content {
+            position: relative;
+            z-index: 1;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+        
+        .headline {
+            color: white;
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .watch-frame {
+            position: relative;
+            width: 200px;
+            height: 244px;
+        }
+        
+        .watch-case {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 244px;
+            background: #1c1c1e;
+            border-radius: 44px;
+            box-shadow: 
+                0 20px 40px rgba(0,0,0,0.5),
+                inset 0 0 0 1px rgba(255,255,255,0.1);
+        }
+        
+        .watch-crown {
+            position: absolute;
+            right: -6px;
+            top: 70px;
+            width: 8px;
+            height: 32px;
+            background: linear-gradient(90deg, #3a3a3a, #2a2a2a);
+            border-radius: 2px;
+        }
+        
+        .watch-button {
+            position: absolute;
+            right: -5px;
+            top: 115px;
+            width: 6px;
+            height: 20px;
+            background: #2a2a2a;
+            border-radius: 2px;
+        }
+        
+        .watch-screen {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 180px;
+            height: 224px;
+            border-radius: 36px;
+            overflow: hidden;
+            background: #000;
+        }
+        
+        .watch-screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .subheadline {
+            color: rgba(255,255,255,0.8);
+            font-size: 16px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .print-guide {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #333;
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            font-size: 14px;
+            z-index: 1000;
+        }
+        
+        .print-guide h3 {
+            margin-bottom: 10px;
+        }
+        
+        .print-guide p {
+            margin: 5px 0;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="print-guide">
+        <h3>Watch 截图生成器</h3>
+        <p>尺寸: 422 x 514 px</p>
+        <p>右键 -> 检查 -> 截图节点</p>
+    </div>
+
+    <div class="poster-container">
+        
+        <!-- Watch Poster 1: 开始界面 -->
+        <div class="poster" id="watch1">
+            <div class="poster-bg bg-gradient-1"></div>
+            <div class="poster-content">
+                <div class="headline">一键开始记录</div>
+                <div class="watch-frame">
+                    <div class="watch-case">
+                        <div class="watch-crown"></div>
+                        <div class="watch-button"></div>
+                        <div class="watch-screen">
+                            <img src="incoming-07445BCD-58E6-4145-A6BD-B1A241D42F1C.PNG" alt="开始">
+                        </div>
+                    </div>
+                </div>
+                <div class="subheadline">手表上轻松开始</div>
+            </div>
+        </div>
+        
+        <!-- Watch Poster 2: 记录中 -->
+        <div class="poster" id="watch2">
+            <div class="poster-bg bg-gradient-2"></div>
+            <div class="poster-content">
+                <div class="headline">实时心率监测</div>
+                <div class="watch-frame">
+                    <div class="watch-case">
+                        <div class="watch-crown"></div>
+                        <div class="watch-button"></div>
+                        <div class="watch-screen">
+                            <img src="incoming-BD64B3C6-44BA-4257-B175-8B14A5BA644D.PNG" alt="记录中">
+                        </div>
+                    </div>
+                </div>
+                <div class="subheadline">与 iPhone 自动同步</div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
