@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intimate Moments - 亲密时刻 | 伴侣健康追踪</title>
+    <meta name="description" content="用科学的方式了解你们的亲密关系。通过 Apple Watch 追踪心率，分析活动阶段，保护隐私。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink: #FF2D55;
+            --purple: #AF52DE;
+            --gradient: linear-gradient(135deg, #FF2D55 0%, #AF52DE 100%);
+            --dark: #1a1a2e;
+            --gray: #8e8e93;
+            --light-bg: #f5f5f7;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: var(--gradient);
+            color: white;
+            padding: 80px 0 120px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+            animation: pulse 15s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        .app-icon svg {
+            width: 70px;
+            height: 70px;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .hero .subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            opacity: 0.95;
+        }
+        
+        .app-store-btn {
+            display: inline-block;
+            background: #000;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .app-store-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        /* Features */
+        .features {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+        
+        .features h2 {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 32px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 32px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--gradient);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        
+        .feature-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+        
+        .feature-card p {
+            color: var(--gray);
+            font-size: 15px;
+        }
+        
+        /* Privacy Section */
+        .privacy-highlight {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .privacy-highlight h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .privacy-highlight p {
+            font-size: 18px;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+        
+        .privacy-badges {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        
+        .privacy-badge {
+            background: var(--light-bg);
+            padding: 16px 28px;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+        
+        .privacy-badge span {
+            font-size: 24px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 40px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-brand h3 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+        
+        .footer-brand p {
+            color: rgba(255,255,255,0.6);
+        }
+        
+        .footer-links h4 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            opacity: 0.6;
+        }
+        
+        .footer-links a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 10px;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+        }
+        
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+            font-size: 14px;
+        }
+        
+        /* Language Switcher */
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            z-index: 10;
+        }
+        
+        .lang-switch a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 8px;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        
+        .lang-switch a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero .subtitle {
+                font-size: 16px;
+            }
+            
+            .features h2, .privacy-highlight h2 {
+                font-size: 28px;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="lang-switch">
+            <a href="index-en.html">English</a>
+        </div>
+        <div class="container hero-content">
+            <div class="app-icon">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FF2D55"/>
+                            <stop offset="100%" style="stop-color:#AF52DE"/>
+                        </linearGradient>
+                    </defs>
+                    <path d="M50 85C50 85 15 60 15 35C15 20 27 10 42 10C47 10 50 15 50 15C50 15 53 10 58 10C73 10 85 20 85 35C85 60 50 85 50 85Z" fill="url(#heartGrad)"/>
+                    <circle cx="50" cy="45" r="20" stroke="white" stroke-width="3" fill="none" opacity="0.3"/>
+                    <path d="M40 45 L47 52 L60 38" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <h1>亲密时刻</h1>
+            <p class="subtitle">Intimate Moments</p>
+            <p>用科学的方式了解你们的亲密关系。通过 Apple Watch 追踪心率变化，智能识别活动阶段，让每一刻都更有意义。</p>
+            <a href="#" class="app-store-btn">即将上架 App Store</a>
+        </div>
+    </section>
+    
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <h2>核心功能</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">❤️</div>
+                    <h3>智能心率追踪</h3>
+                    <p>通过 Apple Watch 实时监测心率变化，自动识别预热期、高峰期和恢复期。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>数据可视化</h3>
+                    <p>直观的图表展示心率曲线、运动强度和步频数据，追踪长期趋势变化。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⌚</div>
+                    <h3>Apple Watch 集成</h3>
+                    <p>在手表上开始记录，手机自动同步。支持实时数据传输，低功耗设计。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔥</div>
+                    <h3>卡路里追踪</h3>
+                    <p>根据心率和运动数据精确计算卡路里消耗，了解每次活动的运动量。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>精美小组件</h3>
+                    <p>主屏幕小组件展示统计数据，支持多种尺寸，隐私保护设计。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>智能检测</h3>
+                    <p>自动从健康数据中识别可能遗漏的记录，打开App时提醒添加。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Privacy -->
+    <section class="privacy-highlight">
+        <div class="container">
+            <h2>隐私优先</h2>
+            <p>我们深知这类数据的敏感性。所有数据仅存储在您的设备本地，我们不会收集或上传任何个人信息。</p>
+            <div class="privacy-badges">
+                <div class="privacy-badge">
+                    <span>🔐</span>
+                    Face ID 保护
+                </div>
+                <div class="privacy-badge">
+                    <span>📱</span>
+                    本地存储
+                </div>
+                <div class="privacy-badge">
+                    <span>🙈</span>
+                    后台模糊
+                </div>
+                <div class="privacy-badge">
+                    <span>🚫</span>
+                    无云端上传
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>亲密时刻</h3>
+                    <p>伴侣健康追踪应用</p>
+                </div>
+                <div class="footer-links">
+                    <h4>法律信息</h4>
+                    <a href="privacy.html">隐私政策</a>
+                    <a href="terms.html">使用条款</a>
+                </div>
+                <div class="footer-links">
+                    <h4>支持</h4>
+                    <a href="support.html">帮助中心</a>
+                    <a href="mailto:support@intimatemoments.app">联系我们</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Intimate Moments. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

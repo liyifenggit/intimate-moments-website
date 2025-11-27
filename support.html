@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帮助与支持 - 亲密时刻 | Support</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink: #FF2D55;
+            --purple: #AF52DE;
+            --gradient: linear-gradient(135deg, #FF2D55 0%, #AF52DE 100%);
+            --dark: #1a1a2e;
+            --gray: #8e8e93;
+            --light-bg: #f5f5f7;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.8;
+            color: var(--dark);
+            background: #fff;
+        }
+        
+        .header {
+            background: var(--gradient);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .header h1 { font-size: 36px; margin-bottom: 8px; }
+        .header p { opacity: 0.9; }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--pink);
+            text-decoration: none;
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+        
+        .back-link:hover { text-decoration: underline; }
+        
+        .faq-section { margin-bottom: 48px; }
+        
+        .faq-section h2 {
+            font-size: 24px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .faq-section h2 span { font-size: 28px; }
+        
+        .faq-item {
+            background: var(--light-bg);
+            border-radius: 12px;
+            margin-bottom: 12px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 20px 24px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question:hover { background: rgba(0,0,0,0.02); }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: var(--pink);
+            transition: transform 0.2s;
+        }
+        
+        .faq-item.open .faq-question::after {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            display: none;
+            padding: 0 24px 20px;
+            color: #555;
+        }
+        
+        .faq-item.open .faq-answer { display: block; }
+        
+        .contact-section {
+            background: var(--light-bg);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+        
+        .contact-section p {
+            color: var(--gray);
+            margin-bottom: 24px;
+        }
+        
+        .contact-btn {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255,45,85,0.3);
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        footer p { color: rgba(255,255,255,0.6); margin: 0; }
+        footer a { color: white; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>帮助与支持</h1>
+        <p>Help & Support</p>
+    </div>
+    
+    <div class="container">
+        <a href="index.html" class="back-link">← 返回首页</a>
+        
+        <!-- Getting Started -->
+        <div class="faq-section">
+            <h2><span>🚀</span> 快速开始</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">如何开始第一次记录？</div>
+                <div class="faq-answer">
+                    <p>1. 确保您的 iPhone 和 Apple Watch 已配对</p>
+                    <p>2. 在 Apple Watch 上打开亲密时刻应用</p>
+                    <p>3. 点击"开始"按钮开始记录</p>
+                    <p>4. 活动结束后点击"结束"，数据会自动同步到 iPhone</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">需要授予哪些权限？</div>
+                <div class="faq-answer">
+                    <p>应用需要以下权限才能正常工作：</p>
+                    <p>• <strong>健康数据读取：</strong>读取心率和运动数据</p>
+                    <p>• <strong>健康数据写入：</strong>保存体能训练记录（可选）</p>
+                    <p>• <strong>Face ID / Touch ID：</strong>保护应用访问（可选）</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Features -->
+        <div class="faq-section">
+            <h2><span>✨</span> 功能说明</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">阶段识别是如何工作的？</div>
+                <div class="faq-answer">
+                    <p>应用通过分析心率变化模式自动识别活动的不同阶段：</p>
+                    <p>• <strong>预热期：</strong>心率逐渐上升的阶段</p>
+                    <p>• <strong>高峰期：</strong>心率维持在较高水平</p>
+                    <p>• <strong>高潮期：</strong>心率达到峰值的阶段</p>
+                    <p>• <strong>恢复期：</strong>心率逐渐恢复的阶段</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">智能检测功能是什么？</div>
+                <div class="faq-answer">
+                    <p>智能检测功能可以从您的健康数据中识别可能遗漏的记录。当您打开应用时，如果检测到过去48小时内有符合特征的活动，会提示您是否添加记录。</p>
+                    <p>此功能可以在设置中开启或关闭。</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">卡路里是如何计算的？</div>
+                <div class="faq-answer">
+                    <p>卡路里计算基于以下因素：</p>
+                    <p>• 您的体重和年龄（在设置中填写）</p>
+                    <p>• 活动时长</p>
+                    <p>• 平均心率和峰值心率</p>
+                    <p>• 运动强度</p>
+                    <p>这是一个估算值，实际消耗可能有所不同。</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Privacy -->
+        <div class="faq-section">
+            <h2><span>🔒</span> 隐私与安全</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">我的数据安全吗？</div>
+                <div class="faq-answer">
+                    <p>是的，非常安全。所有数据仅存储在您的设备本地：</p>
+                    <p>• 我们没有服务器，不会上传任何数据</p>
+                    <p>• 数据不会同步到 iCloud</p>
+                    <p>• 支持 Face ID / Touch ID 保护</p>
+                    <p>• 切换应用时自动模糊内容</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">如何删除所有数据？</div>
+                <div class="faq-answer">
+                    <p>您可以在 设置 → 数据管理 → 清空所有历史 中删除所有会话记录。</p>
+                    <p>卸载应用也会删除所有本地存储的数据。</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Troubleshooting -->
+        <div class="faq-section">
+            <h2><span>🔧</span> 问题排查</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">手表数据没有同步到手机？</div>
+                <div class="faq-answer">
+                    <p>请检查以下几点：</p>
+                    <p>1. 确保 iPhone 和 Apple Watch 在通信范围内</p>
+                    <p>2. 检查设置中的"手表连接"状态</p>
+                    <p>3. 尝试在 iPhone 上下拉刷新</p>
+                    <p>4. 重启 iPhone 和 Apple Watch 上的应用</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">心率数据显示不完整？</div>
+                <div class="faq-answer">
+                    <p>这可能是因为：</p>
+                    <p>• Apple Watch 佩戴不够紧，导致心率采集间断</p>
+                    <p>• 活动时间过短，数据不足以分析</p>
+                    <p>• 建议确保手表紧贴手腕，且活动持续至少5分钟</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Face ID 解锁失败怎么办？</div>
+                <div class="faq-answer">
+                    <p>如果 Face ID 解锁多次失败，您可以：</p>
+                    <p>1. 确保面部在摄像头可见范围内</p>
+                    <p>2. 移除遮挡物（如口罩）</p>
+                    <p>3. 如果持续失败，可以使用设备密码解锁</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact -->
+        <div class="contact-section">
+            <h2>还有其他问题？</h2>
+            <p>如果以上内容没有解决您的问题，欢迎联系我们</p>
+            <a href="mailto:support@intimatemoments.app" class="contact-btn">发送邮件</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Intimate Moments. <a href="index.html">Back to Home</a></p>
+    </footer>
+    
+    <script>
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                item.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
