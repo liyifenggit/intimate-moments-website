@@ -1,4 +1,4 @@
-# Intimate Moments - 亲密时刻
+# Shuangqi - 双栖
 
 伴侣健康追踪应用官方网站
 
@@ -95,4 +95,4 @@ GitHub Pages 会自动重新部署。
 
 ---
 
-© 2025 Intimate Moments. All rights reserved.
+© 2025 Shuangqi. All rights reserved.
